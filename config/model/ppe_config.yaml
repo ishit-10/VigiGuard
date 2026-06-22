@@ -1,0 +1,39 @@
+# PPE Detection Model Configuration
+model:
+  name: "yolov8n"
+  input_size: 640
+  conf_threshold: 0.5
+  iou_threshold: 0.45
+  device: "cpu"  # cpu, cuda:0, mps
+
+classes:
+  person: 0
+  tools: 7
+  helmet: 10
+  hands: 11
+  shoes: 14
+  safety_suit: 15
+
+ppe_item_mapping:
+  head: ["helmet"]
+  hands: ["hands"]  
+  feet: ["shoes"]
+  body: ["safety_suit"]
+  tools_carried: ["tools"]
+
+training:
+  epochs: 8
+  batch_size: 16
+  lr: 0.001
+  optimizer: "Adam"
+  augment: true
+  mosaic: 0.5
+  mixup: 0.0
+  patience: 20
+  seed: 42
+
+paths:
+  dataset: "/Users/ishit.chhabra/Desktop/DMRC_PPE_Tracking/dataset"
+  weights: "./model/weights"
+  logs: "./model/training/logs"
+  output: "./model/inference/output"

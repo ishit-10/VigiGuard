@@ -1,0 +1,40 @@
+# Video Processor Configuration
+capture:
+  source: 0  # Camera index or RTSP URL
+  fps: 30
+  width: 1280
+  height: 720
+  buffer_size: 64
+
+detection:
+  model_path: "./model/weights/best.pt"
+  conf_threshold: 0.5
+  iou_threshold: 0.45
+  input_size: 640
+  batch_size: 1
+  skip_frames: 2  # Process every Nth frame
+
+tracking:
+  enabled: true
+  tracker: "bytetrack"  # bytetrack, botsort
+  track_high_thresh: 0.5
+  track_low_thresh: 0.1
+  new_track_thresh: 0.6
+  track_buffer: 30
+  match_thresh: 0.8
+  fuse_score: true
+
+output:
+  display: true
+  save_video: false
+  save_path: "./output/videos"
+  show_bboxes: true
+  show_labels: true
+  show_conf: false
+  line_width: 2
+
+logging:
+  level: "INFO"
+  file: "./logs/video_processor.log"
+  max_size_mb: 10
+  backup_count: 5

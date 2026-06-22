@@ -1,0 +1,28 @@
+# DMRC PPE Tracking System - Dependencies
+
+# === Core ===
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+pydantic==2.5.2
+pyyaml==6.0.1
+
+# === Video Processing ===
+opencv-python==4.8.1.78
+numpy==1.24.3
+Pillow==10.1.0
+
+# === Detection Model ===
+ultralytics==8.0.222
+torch>=2.0.0
+torchvision>=0.15.0
+
+# === Object Tracking ===
+scipy>=1.11.0
+
+# === Database ===
+psutil==5.9.6
+
+# === API & WebSocket ===
+websockets>=12.0
+python-multipart>=0.0.6

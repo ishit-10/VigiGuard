@@ -1,0 +1,52 @@
+# Backend Configuration
+app:
+  name: "DMRC PPE Tracking API"
+  version: "1.0.0"
+  debug: true
+  host: "0.0.0.0"
+  port: 8000
+
+database:
+  url: "sqlite:///./backend/db/dmrc_ppe.db"
+  echo_sql: false
+  pool_size: 10
+  max_overflow: 20
+
+cors:
+  origins:
+    - "http://localhost:3000"
+    - "http://localhost:5173"
+    - "*"
+
+video_processor:
+  host: "localhost"
+  port: 8001
+  reconnect_interval: 5
+
+alert:
+  enabled: true
+  cooldown_seconds: 60  # Min time between same-type alerts
+  alert_types:
+    no_helmet:
+      severity: "high"
+      message: "Worker detected without helmet"
+    no_safety_suit:
+      severity: "high"
+      message: "Worker detected without safety suit"
+    no_safety_shoes:
+      severity: "medium"
+      message: "Worker detected without safety shoes"
+    no_gloves:
+      severity: "medium"
+      message: "Worker detected without hand protection"
+
+metrics:
+  aggregation_interval: 300  # 5 minutes
+  retention_days: 90
+  violation_thresholds:
+    high: 10  # violations per hour
+    medium: 5
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
