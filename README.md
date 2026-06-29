@@ -1,4 +1,4 @@
-# Delhi Metro Rail Corporation (DMRC) PPE Compliance Tracking System
+# DMRC PPE Compliance Tracking System
 
 A real-time Personal Protective Equipment (PPE) compliance detection and monitoring dashboard designed for worker safety tracking in Delhi Metro construction and maintenance sites. The system integrates a custom-trained **YOLOv8** computer vision model, a high-performance **FastAPI** backend featuring REST and WebSockets, and a modern **React + Vite** dashboard.
 
