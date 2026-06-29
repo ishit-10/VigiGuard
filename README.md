@@ -249,41 +249,51 @@ The frontend is a dark-mode theme SPA utilizing Tailwind CSS and React Router. B
 ### 1. Main Dashboard
 Provides site managers with a high-level real-time overview of safety compliance. It features KPI cards tracking the current shift compliance rate, total active safety alerts, cumulative violations, and the current headcount of workers in frame. It also lists real-time alert updates and displays breakdown bars for safety violation categories (e.g. Missing Helmet vs Missing Shoes).
 
-![Dashboard](docs/screenshots/dashboard.png)
+<img width="1680" height="935" alt="Screenshot 2026-06-27 at 10 50 48 PM" src="https://github.com/user-attachments/assets/fe3ad273-7400-4f16-b355-73467b178230" />
+
 
 *Figure 1: Main Dashboard displaying metrics summaries, active alert streams, and compliance trends.*
 
 ### 2. Live Video Monitor
 Enables live streaming of active cameras (or simulated RTSP feeds). It displays the output frames with colored boxes indicating detected workers, helmets, gloves, and tools, alongside a red highlighted alert box for any worker missing safety equipment.
 
-![Live Monitor](docs/screenshots/live_monitor.png)
+<img width="1679" height="936" alt="Screenshot 2026-06-29 at 11 40 30 AM" src="https://github.com/user-attachments/assets/20cd71dd-c96b-43d9-966c-e888f4293ed7" />
+
 
 *Figure 2: Real-time visual monitoring feed with custom annotations and safety warning highlights.*
 
 ### 3. Alerts Management
 A detailed table sorting active, acknowledged, and resolved alerts. Security operators can check the exact timestamp, camera ID, violation type, and track ID of the violating person. It includes action buttons to **Acknowledge** or **Resolve** warnings as they are handled in the field.
 
-![Alerts](docs/screenshots/alerts.png)
+<img width="1679" height="471" alt="Screenshot 2026-06-29 at 11 40 45 AM" src="https://github.com/user-attachments/assets/ed1687d5-3ba3-4df2-818b-cdf8fe1095f2" />
+
 
 *Figure 3: Alerts manager table with filter states and operator action controls.*
 
 ### 4. Safety Analytics
 Visualizes long-term trends and safety metrics. It includes line graphs detailing compliance rates over time, histograms of violations by hour/shift, and heatmaps that highlight safety breach hotspots within different zones.
 
-![Analytics](docs/screenshots/analytics.png)
+<img width="1680" height="935" alt="Screenshot 2026-06-29 at 11 42 06 AM" src="https://github.com/user-attachments/assets/bed24721-098e-4a3f-9ea3-958d8272a24e" />
+
 
 *Figure 4: Historical analytics charts detailing worker safety violation trends.*
 
 ### 5. Offline Video Upload
 Allows operators to drag-and-drop or select local video recordings (MP4, AVI, MOV, MKV) to be analyzed by the server. It displays a live progress bar, a current frame processing counter, and details on active violation detections in the uploaded video. Once complete, it renders an embedded HTML5 video player to stream and download the re-encoded annotated result.
 
-![Video Upload](docs/screenshots/video_upload.png)
+<img width="1679" height="937" alt="Screenshot 2026-06-29 at 11 30 33 AM" src="https://github.com/user-attachments/assets/aec28fe0-c5ca-49d0-a30a-58b4a009a430" />  
+<img width="1680" height="935" alt="Screenshot 2026-06-29 at 11 32 12 AM" src="https://github.com/user-attachments/assets/c300775b-ae49-44b3-a698-fe1425d521b0" />  
+![Uploading Screenshot 2026-06-29 at 11.32.24 AM.png…]()
+
+
+
 
 *Figure 5: Drag-and-drop video upload queue showing process tracking and output stream previews.*
 
 ### 6. Camera Settings
 Enables operator management of video inputs. Users can add new RTSP URLs, USB camera indexes, or video test files, toggle the camera status (Active/Inactive), define monitored locations, and name camera zones.
 
-![Cameras Config](docs/screenshots/cameras.png)
+<img width="1677" height="980" alt="Screenshot 2026-06-27 at 10 52 02 PM" src="https://github.com/user-attachments/assets/2608dd91-2bc2-48f5-b75d-a6524d3181c2" />
+
 
 *Figure 6: System settings panel for configuring, testing, and editing camera streams.*
